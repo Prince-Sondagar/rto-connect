@@ -8,6 +8,7 @@ const authRoutes = require("./routes/authRoutes");
 const applicationRoutes = require("./routes/applicationRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const adminRoutes = require("./routes/admin");
+const userRoutes = require('./routes/userRoutes')
 
 // Initialize Express
 const app = express();
@@ -28,6 +29,8 @@ app.use("/api/vehicles", vehicleRoutes);
 app.use("/api/applications", applicationRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/user", userRoutes);
+
 
 
 // Start the server

@@ -6,6 +6,7 @@ import userManagement from "../assets/images/adminDashImage/userManagement.png";
 import approvalRequest from "../assets/images/adminDashImage/approvalRequest.png";
 import reports from "../assets/images/adminDashImage/reports.png";
 import settings from "../assets/images/adminDashImage/settings.png";
+
 const AdminHome = () => {
     const navigate = useNavigate();
     const sections = [
@@ -28,7 +29,7 @@ const AdminHome = () => {
             description: "View, add, or remove users and their permissions.",
             image: userManagement,
             buttonText: "Manage Users",
-            path: "/admin-home",
+            path: "/manage-user",
         },
         {
             title: "Approval Requests", 

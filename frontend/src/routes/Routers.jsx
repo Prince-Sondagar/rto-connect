@@ -19,6 +19,7 @@ import DLTest from "../pages/DLTest";
 import ApplicationForm from "../pages/ApplicationForm";
 
 import { Routes, Route } from 'react-router-dom';
+import ManageUser from "../pages/manageUser";
 
 const Routers = () => {
   return <Routes>
@@ -36,6 +37,8 @@ const Routers = () => {
     <Route path="/admin-home" element={<AdminHome />} />
     <Route path="/vehicle-list" element={<VehicleList />} />
     <Route path="/view-applications" element={<ViewApplication />} />
+    <Route path="/manage-user" element={<ManageUser />} />
+
 
     <Route path="/user-home" element={<UserHome />} />
     <Route path="/register-vehicle" element={<VehicleRegistration />} />

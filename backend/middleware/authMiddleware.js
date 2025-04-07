@@ -6,10 +6,12 @@ const authMiddleware = (req, res, next) => {
   if (!token) return res.status(401).json({ message: "Access Denied. No token provided." });
 
   try {
+    console.log("Token:", token)
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded; // Attach user details to the request
     next();
   } catch (error) {
+    console.log("Error in middleware:", error)
     res.status(400).json({ message: "Invalid token" });
   }
 };

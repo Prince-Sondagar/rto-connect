@@ -20,6 +20,7 @@ import ApplicationForm from "../pages/ApplicationForm";
 
 import { Routes, Route } from 'react-router-dom';
 import ManageUser from "../pages/manageUser";
+import ManageFitnessCertificate from "../pages/ManageFitnessCertificate";
 
 const Routers = () => {
   return <Routes>
@@ -38,6 +39,7 @@ const Routers = () => {
     <Route path="/vehicle-list" element={<VehicleList />} />
     <Route path="/view-applications" element={<ViewApplication />} />
     <Route path="/manage-user" element={<ManageUser />} />
+    <Route path="/fitness-certificate" element={<ManageFitnessCertificate />} />
 
 
     <Route path="/user-home" element={<UserHome />} />
@@ -45,7 +47,7 @@ const Routers = () => {
     <Route path="/fitness-check" element={<FitnessCheck />} />
     <Route path="/dl-test" element={<DLTest />} />
     <Route path="/apply-dllicense" element={<ApplicationForm />} />
-  </Routes>   
+  </Routes>
 };
 
 export default Routers;

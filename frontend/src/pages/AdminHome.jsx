@@ -22,7 +22,7 @@ const AdminHome = () => {
             description: "Review and approve vehicle fitness certificates.",
             image: fitnessCheck,
             buttonText: "Check Now",
-            path: "/admin-home",
+            path: "/fitness-certificate",
         },
         {
             title: "User Management",

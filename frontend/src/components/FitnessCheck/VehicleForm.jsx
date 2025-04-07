@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { storeVehicalFitnessCertificate } from "../../services/vehicalService";
 
 const VehicleForm = ({ onSubmit }) => {
     const [formData, setFormData] = useState({
@@ -23,8 +24,20 @@ const VehicleForm = ({ onSubmit }) => {
         }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+        console.log("call")
         e.preventDefault();
+        await storeVehicalFitnessCertificate({
+            registrationNo: formData.regNumber,
+            ownerName: formData.ownerName,
+            chassisNumber: formData.chassisNumber,
+            engineNumber: formData.engineNumber,
+            model: formData.model,
+            vehicalType: formData.vehicleType,
+            fuelType: formData.fuelType,
+            emiissionLeval: formData.emissionLevel,
+            insuranceExpiryDate: formData.insuranceExpiry,
+        })
         onSubmit(formData); // ✅ Passes the updated formData to EligibilityCheck
     };
 

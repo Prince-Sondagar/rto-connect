@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: "Failed to fetch vehicles" });
   }
-});
+}); 
 
 // Get all vehicles fitness certificate
 router.get("/getVehicalFitnessCertificate", async (req, res) => {

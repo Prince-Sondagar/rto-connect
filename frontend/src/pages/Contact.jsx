@@ -13,7 +13,12 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/contact", formData);
+      const token = localStorage.getItem('token');
+      await axios.post("http://localhost:5000/api/contact", formData, {
+        headers: {
+          'Authorization': `${token}` // Ensure token format is correct
+        }
+      });
       alert("Query submitted successfully!");
       setFormData({ email: "", subject: "", message: "" });
       navigate("/");

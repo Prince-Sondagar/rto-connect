@@ -43,20 +43,20 @@ const AdminHome = () => {
             description: "Generate and view detailed reports on vehicle data.",
             image: reports,
             buttonText: "View Reports",
-            path: "/admin-home",
+            path: "/reports-analytics",
         },
         {
-            title: "System Settings",
-            description: "Configure system settings and preferences.",
+            title: "Contact Messages",
+            description: "View and manage messages submitted by users through the Contact Us form.",
             image: settings,
-            buttonText: "Configure",
-            path: "/admin-home",
+            buttonText: "View Message",
+            path: "/contact-messages",
         },
     ];
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-gray-100 to-gray-300 p-8">
-            <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-10">Admin Dashboard</h1>
+            {/* <h1 className="text-4xl font-extrabold text-center text-gray-900 mb-10">Admin Dashboard</h1> */}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sections.map((section, index) => (

@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Application = require("../models/Application");
+const reportsAndAnalytisController = require("../controllers/adminController");
 
 // Get all applications with user details
 router.get("/applications", async (req, res) => {
@@ -39,7 +40,7 @@ router.put("/applications/:id", async (req, res) => {
 });
 
 
-
+router.get('/reports-analytis', reportsAndAnalytisController)
 
 
 module.exports = router;

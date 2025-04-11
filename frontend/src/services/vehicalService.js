@@ -33,3 +33,14 @@ export const getVehicalFitnessCertificate = async () => {
         throw error;
     }
 };
+
+
+export const getRepostaAdndAnaylistData = async () => {
+    try {
+        const response = await axios.get(`http://localhost:5000/api/admin/reports-analytis`);
+        return response?.data;
+    } catch (error) {
+        console.error("Error in storeVehicalFitnessCertificate:", error?.response?.data || error.message);
+        throw error;
+    }
+};

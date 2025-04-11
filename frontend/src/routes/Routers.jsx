@@ -21,6 +21,8 @@ import ApplicationForm from "../pages/ApplicationForm";
 import { Routes, Route } from 'react-router-dom';
 import ManageUser from "../pages/manageUser";
 import ManageFitnessCertificate from "../pages/ManageFitnessCertificate";
+import ReportsAndAnalytic from "../pages/ReportsAndAnalytics";
+import ContactUsMessages from "../pages/ContactUsMessages";
 
 const Routers = () => {
   return <Routes>
@@ -35,11 +37,14 @@ const Routers = () => {
     <Route path="/rto-offices" element={<RTOOfficeList />} />
 
 
+    {/* Admin Routes */}
     <Route path="/admin-home" element={<AdminHome />} />
     <Route path="/vehicle-list" element={<VehicleList />} />
     <Route path="/view-applications" element={<ViewApplication />} />
     <Route path="/manage-user" element={<ManageUser />} />
     <Route path="/fitness-certificate" element={<ManageFitnessCertificate />} />
+    <Route path="/reports-analytics" element={<ReportsAndAnalytic />} />
+    <Route path="/contact-messages" element={<ContactUsMessages />} />
 
 
     <Route path="/user-home" element={<UserHome />} />

@@ -6,7 +6,6 @@ const ManageFitnessCertificate = () => {
 
     const [certificates, setCerticates] = useState([])
 
-
     const getAllVehicalFitnessCerticates = async () => {
         try {
             const result = await getVehicalFitnessCertificate();
@@ -51,7 +50,7 @@ const ManageFitnessCertificate = () => {
                                                 Delete
                                             </button>
                                         </td> */}
-                                    </tr>
+                                    </tr>   
                                 ))
                             ) : (
                                 <tr>
